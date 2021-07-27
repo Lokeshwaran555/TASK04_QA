@@ -1,0 +1,16 @@
+it('login test', function(){
+
+    cy.visit('https://dev.devmobo.com/login')
+    cy.get('#email').type('lokzz05000@gmail.com')
+    cy.get('#password').type('Lokesh@52510')
+    cy.get('#loginButton').click()
+    cy.get(':nth-child(9) > .nav-link').click()
+    cy.get('.HOAdropdown').click()
+    cy.get('select').select('abc123')
+    cy.get('[style="width: 100%; table-layout: fixed;"] > :nth-child(1) > :nth-child(1) > div > .btn-primary').click()
+    cy.get('#eventTitle').type('meeting')
+    cy.get('#eventDescription').type('HOA Meeting')
+    cy.get('[style="text-align: right;"] > .btn').click()
+    
+
+})   
